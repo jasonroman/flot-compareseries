@@ -30,7 +30,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * (c) Jason Roman <jayroman@whgl.net>
+ * (c) Jason Roman <j@jayroman.com>
  */
 (function($)
 {
