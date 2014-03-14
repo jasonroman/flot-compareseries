@@ -1,4 +1,4 @@
-flot-compareseries
+Flot Compare Series
 =============
 
 Simple [Flot](http://www.flotcharts.org) plugin for comparing one series to another and modifying the series colors based on the comparison of values being greater/less than the compared series.  This likely makes no sense when using line charts, but this would work well with the [flot-topbar](https://github.com/jasonroman/flot-topbar) plugin.
