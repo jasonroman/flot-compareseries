@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Flot-compareseries : Flot plugin for comparing one series to another and modifying the series colors based on the comparison" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Flot-compareseries</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jasonroman/flot-compareseries">View on GitHub</a>
+
+          <h1 id="project_title">Flot-compareseries</h1>
+          <h2 id="project_tagline">Flot plugin for comparing one series to another and modifying the series colors based on the comparison</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jasonroman/flot-compareseries/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jasonroman/flot-compareseries/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="flot-compareseries" class="anchor" href="#flot-compareseries"><span class="octicon octicon-link"></span></a>flot-compareseries</h1>
+
+<p>Simple <a href="http://www.flotcharts.org">Flot</a> plugin for comparing one series to another and modifying the series colors based on the comparison of values being greater/less than the compared series.  This likely makes no sense when using line charts, but this would work well with the <a href="https://github.com/jasonroman/flot-topbar">flot-topbar</a> plugin.</p>
+
+<p>The plugin does support comparing all other series to a specific series (which skips comparing to itself), however you would still need to modify the colors for each series individually.</p>
+
+<p>View the <a href="http://jasonroman.github.io/flot-compareseries/example.html">example page</a> to see the plugin in action.</p>
+
+<hr><p>Specifying for all series:</p>
+
+<pre><code>series: {
+    compare: {
+        enabled:      boolean
+        seriesIndex:  int - index of which series to compare to
+        colorAbove:   colorspec - color with values greater than/equal to the corresponding comparison series
+        colorBelow:   colorspec - color with values less than the corresponding comparison series
+    }
+}
+</code></pre>
+
+<p>Specifying for a single series (recommended):</p>
+
+<pre><code>$.plot($("#placeholder"), [{
+    data: [ ... ],
+    compare: { ... }
+}])
+</code></pre>
+
+<p>The following is a break-down of the options:</p>
+
+<ul>
+<li>
+<strong>enabled:</strong> boolean - to enable or disable the comparison for the series (default false)</li>
+<li>
+<strong>seriesIndex:</strong> integer - the numerical index of which series to compare this series to (index starts at 0, also the default)</li>
+<li>
+<strong>colorAbove:</strong> colorspec - the color of values that are greater than or equal to the corresponding value in the compared series (default #FF0000)</li>
+<li>
+<strong>colorBelow:</strong> colorspec - the color of values that are less than the corresponding value in the compared series (default #00FF00)</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Flot-compareseries maintained by <a href="https://github.com/jasonroman">jasonroman</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-48986218-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
