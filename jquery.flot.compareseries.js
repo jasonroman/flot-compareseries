@@ -53,7 +53,7 @@
      * 
      * @param {function} plot - the Flot plot function
      * @param {int} i - numerical index of which series to return
-     * @returns {false|series} - series at the given index if found, false otherwise
+     * @return {false|series} - series at the given index if found, false otherwise
      */
     function getSeries(plot, i)
     {
@@ -98,7 +98,7 @@
      * @param {Object} series - series to copy
      * @param {Object} datapoints - datapoints of the series
      * @param {colorspec} color - color of the series
-     * @returns {Object} copy - copy of the series with empty data
+     * @return {Object} copy - copy of the series with empty data
      */
     function copySeries(series, datapoints, color)
     {
